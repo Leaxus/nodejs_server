@@ -6,4 +6,10 @@ test:
   override:
     - docker info
     - docker-compose up -d
-    - mocha test/test.js
+    - mocha
+
+deployment:
+  hub:
+    branch: dev
+    commands:
+      - $DEPLOY
