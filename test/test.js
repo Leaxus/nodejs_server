@@ -1,5 +1,6 @@
-var todo_utils = require('todo_utils');
+var todo_utils = require('../todo_utils');
 var assert = require('assert');
+var mocha = require('mocha');
 
 describe('#Error : Todo is null', function () {
   it('todo_utils._getAll should throw an error : todo is null', function () {
