@@ -3,6 +3,7 @@ machine:
     - docker
 
 test:
-  post:
+  override:
     - docker info
     - docker-compose up -d
+    - mocha test/test.js
