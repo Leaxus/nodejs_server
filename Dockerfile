@@ -14,6 +14,7 @@ COPY package.json /usr/src/app/
 
 # Run the basic command to install node and it's dependancy.
 RUN npm install
+RUN npm install mocha
 
 RUN npm install mocha --save
 
