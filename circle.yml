@@ -14,8 +14,6 @@ test:
 deployment:
   hub:
     branch: master
-    heroku:
-      appname: guarded-tor-19799
     commands:
       - git push git@heroku.com:guarded-tor-19799.git $CIRCLE_SHA1:refs/heads/master
       - $DEPLOY
