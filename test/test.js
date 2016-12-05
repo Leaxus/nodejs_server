@@ -23,3 +23,27 @@ describe('#Get', function () {
     });
   });
 });
+
+describe('#GetAll', function () {
+  it('todo_utils._getAll() should return : [A thing, A good thing, Another thing]', function () {
+    todo_utils._init();
+    todo_utils._new();
+    todo_utils._add('A thing', (todoList) => {});
+    todo_utils._add('A good thing', (todoList) => {});
+    todo_utils._add('Another thing', (todoList) => {});
+    todo_utils._getAll((things) => {
+      assert.equal(things[0], 'A thing');
+      assert.equal(things[1], 'A good thing');
+      assert.equal(things[2], 'Another thing');
+    });
+  });
+});
+
+/*describe('#Del', function () {
+  it('todo_utils._del() + getAll should return : null', function () {
+    todo_utils._init();
+    todo_utils._new();
+    todo_utils._add('A thing', (todoList) => {});
+    todo_utils._del(0, )
+  });
+});*/
